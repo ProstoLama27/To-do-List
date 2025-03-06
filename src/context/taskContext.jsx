@@ -1,11 +1,19 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import {v4 as uuidv4} from "uuid"
 
 export const TaskContext = createContext()
 
 export const TaskProvider = ({children}) =>{
+
     const [newTask, setNewTask] = useState("")
-    const [taskList, setTasklList] = useState([])
+    const [taskList, setTaskList] = useState(() =>{
+        const savedTasks = localStorage.getItem("tasks")
+        return savedTasks ? JSON.parse(savedTasks ): []
+    })
+
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(taskList))
+    }, [taskList])
 
     const addTask = () =>{
         const taskObj = {
@@ -15,7 +23,7 @@ export const TaskProvider = ({children}) =>{
         }
         
         const addNewTask = [taskObj, ...taskList]
-        setTasklList(addNewTask)
+        setTaskList(addNewTask)
         setNewTask("")
     }
 

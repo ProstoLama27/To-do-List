@@ -5,7 +5,7 @@ export const TaskContext = createContext()
 
 export const TaskProvider = ({children}) =>{
     const [newTask, setNewTask] = useState("")
-    const [taskList, setTaslList] = useState([])
+    const [taskList, setTasklList] = useState([])
 
     const addTask = () =>{
         const taskObj = {
@@ -15,7 +15,7 @@ export const TaskProvider = ({children}) =>{
         }
         
         const addNewTask = [taskObj, ...taskList]
-        setTaslList(addNewTask)
+        setTasklList(addNewTask)
         setNewTask("")
     }
 

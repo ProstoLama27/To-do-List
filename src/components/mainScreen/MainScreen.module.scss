@@ -1,13 +1,13 @@
-div{
-    display: flex;
-    justify-content: center;
-}
-
 .mainScreen{
     width: 500px;
     margin-top: 10px;
     border-radius: 10px;
     background-color:#C7E3D5 ;
+
+    // div{
+    //     display: flex;
+    //     justify-content: center;
+    // }
 
     &__header{
         color:#5238AE ;

@@ -1,0 +1,26 @@
+.modal{
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    width: 300px;
+    height: 200px;
+    z-index: 1;
+    background-color: aqua;
+
+    &__header{
+        height: 30px;
+        padding-top: 5px;
+        background-color: bisque;
+
+        &__btn{
+            width: 40px;
+           border: none;
+           background-color: transparent;
+           float: right; 
+           cursor: pointer;
+
+           
+        }
+    }
+}
+

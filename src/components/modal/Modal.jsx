@@ -1,3 +1,4 @@
+import Form from "../form/Form";
 import styles from "./Modal.module.scss"
 import { IoCloseSharp } from "react-icons/io5";
 const Modal = (props) => {
@@ -12,6 +13,7 @@ const Modal = (props) => {
                         <IoCloseSharp/>
                     </button>
                 </div>
+                <Form/>
             </div> );
     }
    

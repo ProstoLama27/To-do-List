@@ -1,0 +1,27 @@
+div{
+    display: flex;
+    justify-content: center;
+}
+
+.mainScreen{
+    width: 500px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color:#C7E3D5 ;
+
+    &__header{
+        color:#5238AE ;
+    }
+
+    button{
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 15px;
+        background-color:#83A017 ;
+    }
+
+    &__philter{
+        margin: 40px;
+        column-gap: 5px;
+    }
+}

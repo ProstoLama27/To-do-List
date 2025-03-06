@@ -11,6 +11,9 @@ export const TaskProvider = ({children}) =>{
         return savedTasks ? JSON.parse(savedTasks ): []
     })
 
+    const [filter, setFilter] = useState("all")
+    
+
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(taskList))
     }, [taskList])
@@ -38,8 +41,20 @@ export const TaskProvider = ({children}) =>{
 
     }
 
+    const getFilteredTasks = () => {
+        switch (filter) {
+            case "active":
+                return taskList.filter((task) => !task.status);
+            case "completed":
+                return taskList.filter((task) => task.status);
+            default:
+                return taskList;
+        }
+    };
+   
+
     return(
-        <TaskContext.Provider value={{newTask, setNewTask, addTask, taskList, deleteTask, toggleTask}}>
+        <TaskContext.Provider value={{newTask, setNewTask, addTask, taskList, deleteTask, toggleTask, filter, setFilter, getFilteredTasks}}>
             {children}
         </TaskContext.Provider>
     )

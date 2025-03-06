@@ -3,7 +3,8 @@ import { TaskContext } from "../../context/taskContext";
 import Button from "../button/Button";
 
 const TaskList = () => {
-    const {taskList, deleteTask, toggleTask} = useContext(TaskContext)
+    const { deleteTask, toggleTask, getFilteredTasks} = useContext(TaskContext)
+    const taskList = getFilteredTasks()
     console.log(taskList);
     return ( 
         <div>
@@ -14,7 +15,7 @@ const TaskList = () => {
                             {/* сделать изменнениея стиля задачи */}
                             <p >{task.value}</p>
                             <Button text="удалить" action={()=>{deleteTask(task.id)}}/>
-                            <input type="checkbox" onClick={()=>{toggleTask(task.id)}}/>
+                            <input type="checkbox" checked={task.status}  onClick={()=>{toggleTask(task.id)}}/>
 
                         </li>
                         

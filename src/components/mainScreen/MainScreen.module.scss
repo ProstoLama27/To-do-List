@@ -30,6 +30,11 @@
         justify-content: center;
         font-size: 20px;
         color: #5238AE;
+
+        &___btn{
+            border: none;
+            background-color: transparent;
+        }
     }
 
     &__btn__block{

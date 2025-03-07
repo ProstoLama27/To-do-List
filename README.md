@@ -1,12 +1,17 @@
-# React + Vite
+# To-Do List на React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Этот проект представляет собой простой задачник (To-Do List), разработанный с использованием библиотеки React. Приложение позволяет пользователям добавлять, удалять и отмечать задачи как выполненные. Все задачи сохраняются в локальном хранилище браузера (Local Storage), что позволяет сохранять данные даже после перезагрузки страницы.
 
-Currently, two official plugins are available:
+## Используемые технологии и библиотеки
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** — библиотека для построения пользовательских интерфейсов.
+- **Sass (SCSS)** — препроцессор CSS для удобной стилизации компонентов.
+- **React Icons** — библиотека иконок для React, предоставляющая широкий выбор иконок для использования в проекте.
 
-## Expanding the ESLint configuration
+## Основные функции
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Добавление новых задач.
+- Удаление задач.
+- Отметка задач как выполненных.
+- Фильтрация задач по их статусу (выполненные/не выполненные).
+- Сохранение задач в Local Storage для сохранения данных между сессиями.

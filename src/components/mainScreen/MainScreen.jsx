@@ -4,6 +4,7 @@ import Modal from "../modal/Modal";
 import Button from "../button/Button";
 import TaskList from "../taskList/TaskList";
 import { TaskContext } from "../../context/taskContext";
+
 const MainScreen = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [modalContent, setModalContent] = useState()

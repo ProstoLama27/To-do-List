@@ -35,6 +35,11 @@ export const TaskProvider = ({children}) =>{
         setTaskList(del)
     }
 
+    const deletAllTasks = () => {
+        let m = []
+        setTaskList(m)
+    }
+
     const toggleTask = (id) =>{
         let toggelSatus = taskList.map((e) => e.id === id ? {...e , status : !e.status} : {...e})
         setTaskList(toggelSatus)
@@ -54,7 +59,7 @@ export const TaskProvider = ({children}) =>{
    
 
     return(
-        <TaskContext.Provider value={{newTask, setNewTask, addTask, taskList, deleteTask, toggleTask, filter, setFilter, getFilteredTasks}}>
+        <TaskContext.Provider value={{newTask, setNewTask, addTask, taskList, deleteTask, toggleTask, filter, setFilter, getFilteredTasks, deletAllTasks}}>
             {children}
         </TaskContext.Provider>
     )

@@ -6,7 +6,7 @@ import styles from "./TaskList.module.scss"
 const TaskList = () => {
     const { deleteTask, toggleTask, getFilteredTasks} = useContext(TaskContext)
     const taskList = getFilteredTasks()
-    console.log(taskList);
+    
     return ( 
         <div>
             <ul>

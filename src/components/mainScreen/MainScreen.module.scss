@@ -27,20 +27,61 @@
 
     &__header{
         display: flex;
+        position: relative;
         justify-content: center;
         font-size: 20px;
         color: #5238AE;
 
-        &___btn{
+        &__title{
+            flex: 1;
+            text-align: center;
+        }
+
+        &__btn{
+            position: absolute;
+            top: 25px;
+            right: 25px;
             border: none;
             background-color: transparent;
+            cursor: pointer;
+
+            svg {
+                width: 35px;
+                height: 35px;
+
+            }
+
+            &:hover {
+                svg {
+                    color: #007bff; /* Синий цвет при наведении */
+                }
+            }
         }
     }
-
-    &__btn__block{
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-        gap: 10px;
-    }
 }
+
+// .mainScreen{
+//     width: 500px;
+//     border-radius: 10px;
+//     margin-top: 10px;
+//     background-color: #C7E3D5;
+
+//     &__header{
+//         display: flex;
+//         justify-content: center;
+//         font-size: 20px;
+//         color: #5238AE;
+
+//         &___btn{
+//             border: none;
+//             background-color: transparent;
+//         }
+//     }
+
+//     &__btn__block{
+//         display: flex;
+//         justify-content: center;
+//         padding: 10px;
+//         gap: 10px;
+//     }
+// }

@@ -1,7 +1,21 @@
 import Form from "../form/Form";
+import ModalScreenDeletAll from "../modalScreenDeletAll/ModalScreenDeletAll";
 import styles from "./Modal.module.scss"
 import { IoCloseSharp } from "react-icons/io5";
 const Modal = (props) => {
+
+    const toggleModalCOntent = () =>{
+        switch(props.content){
+            case 1:
+                return <Form/>
+                
+            
+            case 2:
+                return <ModalScreenDeletAll modalToggle={props.modalToggle}/>
+        }
+    }
+
+
     if(props.isOpen == false) {
         return null
     }
@@ -13,7 +27,7 @@ const Modal = (props) => {
                         <IoCloseSharp/>
                     </button>
                 </div>
-                <Form/>
+               {toggleModalCOntent()}
             </div> );
     }
    

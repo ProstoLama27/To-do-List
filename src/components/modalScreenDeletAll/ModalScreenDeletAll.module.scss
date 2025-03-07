@@ -1,0 +1,16 @@
+.container{
+    align-items: center;
+
+    &__text{
+        margin-left: 10px;
+        color: aqua;
+        font-size: 15px;
+    }
+
+    &__control{
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+        gap: 50px;
+    }
+}

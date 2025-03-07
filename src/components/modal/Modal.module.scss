@@ -1,25 +1,50 @@
+// .modal{
+//     position: fixed;
+//     top: 30%;
+//     left: 30%;
+//     width: 300px;
+//     height: 200px;
+//     z-index: 1;
+//     background-color: aqua;
+
+//     &__header{
+//         height: 30px;
+//         padding-top: 5px;
+//         background-color: bisque;
+
+//         &__btn{
+//             width: 40px;
+//            border: none;
+//            background-color: transparent;
+//            float: right; 
+//            cursor: pointer;
+
+           
+//         }
+//     }
+// }
+
 .modal{
     position: fixed;
     top: 30%;
     left: 30%;
     width: 300px;
     height: 200px;
-    z-index: 1;
-    background-color: aqua;
+    background-color: #194728;
+    border-radius: 10px;
+    // color: #14D7B5;
 
     &__header{
+        display: flex;
+        justify-content: end;
         height: 30px;
-        padding-top: 5px;
-        background-color: bisque;
+        align-items: end;
 
         &__btn{
-            width: 40px;
-           border: none;
-           background-color: transparent;
-           float: right; 
-           cursor: pointer;
-
-           
+            border: none;
+            background-color: transparent;
+            margin-right: 5px;
+            cursor: pointer;
         }
     }
 }

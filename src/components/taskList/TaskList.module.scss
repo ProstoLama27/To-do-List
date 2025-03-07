@@ -1,0 +1,41 @@
+// .list {
+//     display: flex;
+//     align-items: center; /* Выравниваем элементы по вертикали по центру */
+//     justify-content: space-between; /* Распределяем пространство между текстом и кнопками */
+//     padding: 10px;
+//     border-bottom: 1px solid #ccc; /* Добавляем разделитель между задачами */
+// }
+
+// .list__text {
+//     flex-grow: 1; /* Текст занимает все доступное пространство */
+//     text-align: center; /* Выравниваем текст по центру */
+// }
+
+// .list__control {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px; /* Расстояние между чекбоксом и кнопкой */
+// }
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    min-width: 200px;
+    // border-color: red;
+    border: 5px solid #496659;
+    border-radius: 10px;
+
+    &__text{
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    &__control{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        gap: 10px;
+    }
+}

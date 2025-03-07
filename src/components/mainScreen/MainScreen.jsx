@@ -16,13 +16,13 @@ const MainScreen = () => {
             <div className={styles.mainScreen__header}>
                 <h1>Мои задачи</h1>
             </div>
-            <div>
+            <div className={styles.mainScreen__btn__block}>
                 <Button text="Записать задачу" action={modalToggle} />
             </div>
-            <div>
+            <div  className={styles.mainScreen__btn__block}>
                 <TaskList/>
             </div>
-            <div className={styles.mainScreen__philter}>
+            <div className={styles.mainScreen__btn__block}>
                 <Button text="Все" action={() => setFilter("all")} />
                 <Button text="Активные" action={() => setFilter("active")} />
                 <Button text="Завершенные"  action={() => setFilter("completed")}/>
